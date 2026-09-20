@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pak Ideal Properties - M. Ali Associates</title>
+    <style>
+        body { margin: auto; background-color: #000; color: #fff; font-family: sans-serif; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        .associates2 { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+        .associates2 img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: Associates1 66s infinite ease-in-out; }
+        @keyframes Associates1 { 0% { opacity: 0; } 4% { opacity: 1; } 15% { opacity: 1; } 19% { opacity: 0; } 100% { opacity: 0; } }
+        .associates2 img:nth-child(1) { animation-delay: 0s; } .associates2 img:nth-child(2) { animation-delay: 3s; } .associates2 img:nth-child(3) { animation-delay: 6s; } .associates2 img:nth-child(4) { animation-delay: 9s; } .associates2 img:nth-child(5) { animation-delay: 12s; } .associates2 img:nth-child(6) { animation-delay: 15s; } .associates2 img:nth-child(7) { animation-delay: 18s; } .associates2 img:nth-child(8) { animation-delay: 21s; } .associates2 img:nth-child(9) { animation-delay: 24s; } .associates2 img:nth-child(10) { animation-delay: 27s; } .associates2 img:nth-child(11) { animation-delay: 30s; } .associates2 img:nth-child(12) { animation-delay: 33s; } .associates2 img:nth-child(13) { animation-delay: 36s; } .associates2 img:nth-child(14) { animation-delay: 39s; } .associates2 img:nth-child(15) { animation-delay: 42s; } .associates2 img:nth-child(16) { animation-delay: 45s; } .associates2 img:nth-child(17) { animation-delay: 48s; } .associates2 img:nth-child(18) { animation-delay: 51s; } .associates2 img:nth-child(19) { animation-delay: 54s; } .associates2 img:nth-child(20) { animation-delay: 57s; } .associates2 img:nth-child(21) { animation-delay: 60s; } .associates2 img:nth-child(22) { animation-delay: 63s; }
+        .header1 { height: 100px; text-align: left; font-size: 80px; background: rgba(0, 0, 0, 0.5); position: relative; width: 100%; }
+        .header1 img { height: 105px; width: auto; object-fit: contain; }
+        .hyper1 { position: absolute; top: 25px; right: 30px; display: flex; align-items: center; gap: 12px; z-index: 10; }
+        .hyper1 > a, .dropdown > a { color: #ffd700; text-decoration: none; font-size: 16px; font-family: sans-serif; font-weight: bold; background: rgba(0, 0, 0, 0.4); padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(255, 215, 0, 0.3); backdrop-filter: blur(5px); transition: 0.3s ease-in-out; display: inline-block; white-space: nowrap; }
+        .hyper1 > a:hover, .dropdown > a:hover, .dropdown-content a:hover { background: #ffd700; color: #000; box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
+        .dropdown { position: relative; display: inline-flex; align-items: center; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px; min-width: 150px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); z-index: 20; margin-top: 5px; }
+        .dropdown-content a { display: block; padding: 8px 12px; border: none; border-radius: 0; background: transparent; color: #ffd700; text-decoration: none; font-size: 16px; font-family: sans-serif; font-weight: bold; white-space: nowrap; }
+        .dropdown-content a:first-child { border-top-left-radius: 8px; border-top-right-radius: 8px; }
+        .dropdown-content a:last-child { border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .menu-icon { display: none; width: 28px; height: 14px; cursor: pointer; position: absolute; top: 35px; right: 25px; z-index: 20; flex-direction: column; justify-content: space-between; }
+        .menu-icon span { display: block; height: 2px; width: 100%; background-color: #ffd700; border-radius: 2px; transition: all 0.3s ease-in-out; }
+        .main-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; width: 100%; box-sizing: border-box; }
+        .page-intro { background: rgba(15, 15, 15, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); }
+        .page-intro h1 { color: #ffd700; font-size: 32px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 2px 5px rgba(0,0,0,0.8); }
+        .page-intro p { color: #ccc; font-size: 15px; line-height: 1.6; max-width: 800px; margin: auto; }
+        .properties-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .property-card { background: rgba(15, 15, 15, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); transition: 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .property-card:hover { border-color: rgba(255, 215, 0, 0.7); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 215, 0, 0.2); }
+        .property-info { padding: 20px; text-align: center; }
+        .property-info h3 { color: #ffd700; font-size: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .property-info p { color: #ccc; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+        .card-actions { display: flex; gap: 10px; padding: 0 20px 20px 20px; }
+        .btn-call, .btn-whatsapp { flex: 1; padding: 10px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 13px; text-decoration: none; transition: 0.3s ease; }
+        .btn-call { background: rgba(255, 255, 255, 0.1); color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.4); }
+        .btn-call:hover { background: #ffd700; color: #000; }
+        .btn-whatsapp { background: #25d366; color: #fff; }
+        .btn-whatsapp:hover { background: #20ba5a; box-shadow: 0 0 10px rgba(37, 211, 102, 0.6); }
+        .back-container { text-align: center; margin-top: 20px; }
+        .btn-back { display: inline-block; background: transparent; color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.4); padding: 10px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: 0.3s ease; }
+        .btn-back:hover { background: #ffd700; color: #000; }
+        .footer { background: rgba(10, 10, 10, 0.95); border-top: 1px solid rgba(255, 215, 0, 0.3); padding: 20px; backdrop-filter: blur(10px); width: 100%; box-sizing: border-box; margin-top: 40px; }
+        .footer-content { max-width: 900px; margin: auto; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
+        .footer-contacts { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; }
+        .footer-contacts a { color: #ffd700; text-decoration: none; font-size: 13px; font-weight: bold; transition: 0.3s ease; }
+        .footer-contacts a:hover { text-decoration: underline; color: #ffea75; }
+        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { color: #ccc; text-decoration: none; font-size: 13px; transition: 0.3s ease; }
+        .footer-links a:hover { color: #ffd700; }
+        .footer p { color: #888; font-size: 12px; margin: 0; }
+        @media screen and (max-width: 768px) {
+            .menu-icon { display: flex; }
+            .menu-icon.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+            .menu-icon.open span:nth-child(2) { opacity: 0; }
+            .menu-icon.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+            .header1 img { height: 80px; margin-top: 10px; }
+            .hyper1 { position: absolute; top: 100px; right: 0; width: 100%; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); flex-direction: column; gap: 0px; border-bottom: 2px solid rgba(255, 215, 0, 0.3); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; box-shadow: 0px 15px 25px rgba(0,0,0,0.7); max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; padding: 0; }
+            .hyper1.show { max-height: 500px; padding: 15px 0 25px 0; }
+            .hyper1 > a, .dropdown { width: 85%; margin: 6px auto; text-align: center; border: 1px solid rgba(255, 215, 0, 0.15); background: rgba(255, 255, 255, 0.03); }
+            .dropdown { justify-content: center; flex-direction: column; padding: 0; }
+            .dropdown > a { width: 100%; border: none; background: transparent; }
+            .dropdown-content { position: static; display: none; background: transparent; border: none; box-shadow: none; width: 100%; border-top: 1px solid rgba(255, 215, 0, 0.1); margin-top: 5px; }
+            .dropdown-content a { font-size: 14px; padding: 10px; color: #e6c200; background: rgba(0, 0, 0, 0.4); margin-bottom: 2px; }
+            .dropdown:hover .dropdown-content { display: block; }
+            .properties-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="associates2">
+        <img src="Images/1.jpg" alt=""><img src="images/2.jpg" alt=""><img src="images/3.jpg" alt=""><img src="images/4.jpg" alt=""><img src="images/5.jpg" alt=""><img src="images/6.jpg" alt=""><img src="images/7.jpg" alt=""><img src="images/8.jpg" alt=""><img src="images/9.jpg" alt=""><img src="Images/10.jpg" alt=""><img src="Images/11.jpg" alt=""><img src="Images/12.jpg" alt=""><img src="Images/13.jpg" alt=""><img src="Images/14.jpg" alt=""><img src="Images/15.jpg" alt=""><img src="Images/16.jpg" alt=""><img src="Images/17.jpg" alt=""><img src="Images/18.jpg" alt=""><img src="Images/19.jpg" alt=""><img src="Images/20.jpg" alt=""><img src="Images/21.jpg" alt=""><img src="Images/22.jpg" alt="">
+    </div>
+
+    <header class="header1">
+        <img src="Images/logo.png" alt="Logo">
+        <div class="menu-icon" onclick="toggleMenu()" id="menuBtn"><span></span><span></span><span></span></div>
+        <div class="hyper1" id="navMenu">
+            <a href="Index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="properties.html">Properties ▾</a>
+                <div class="dropdown-content">
+                    <a href="sachalsarmast.html">Sachal Sarmast</a>
+                    <a href="pakideal.html">Pak Ideal</a>
+                    <a href="gulshaneroomi.html">Gulshan-e-Roomi</a>
+                    <a href="saaditown.html">Saadi Town</a>
+                    <a href="peeraahmedzaman.html">Peer Ahmed Zaman</a>
+                    <a href="tipusultan.html">Tipu Sultan</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="page-intro">
+            <h1>Pak Ideal - Property Categories</h1>
+            <p>Pak Ideal stands out as a high-demand locality offering exceptional growth potential. Discover our verified listings customized for ideal residential living, commercial setups, and rental solutions.</p>
+        </div>
+
+        <div class="properties-grid">
+            <div class="property-card">
+                <div class="property-info">
+                    <h3>For Home</h3>
+                    <p>High-demand residential plots and well-designed homes built to provide long-term comfort and security in Pak Ideal.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="tel:+923363183136" class="btn-call">Call Now</a>
+                    <a href="https://wa.me/923062182077?text=I%20want%20to%20inquire%20about%20For%20Home%20properties%20in%20Pak%20Ideal" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-info">
+                    <h3>Prime Location</h3>
+                    <p>Strategically positioned commercial properties and plots offering high-return investment opportunities and excellent footfall.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="tel:+923363183136" class="btn-call">Call Now</a>
+                    <a href="https://wa.me/923062182077?text=I%20want%20to%20inquire%20about%20Prime%20Location%20properties%20in%20Pak%20Ideal" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-info">
+                    <h3>For Rent</h3>
+                    <p>Premium rental options including residential spaces and commercial shops available under trusted lease agreements.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="tel:+923363183136" class="btn-call">Call Now</a>
+                    <a href="https://wa.me/923062182077?text=I%20want%20to%20inquire%20about%20Properties%20For%20Rent%20in%20Pak%20Ideal" target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-container">
+            <a href="properties.html" class="btn-back">← Back to All Properties</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contacts">
+                <a href="tel:+923363183136">Phone: +923363183136</a>
+                <a href="https://wa.me/923062182077" target="_blank">WhatsApp: +923062182077</a>
+                <a href="mailto:khaleeqarain0@gmail.com">Email: khaleeqarain0@gmail.com</a>
+            </div>
+            <div class="footer-links">
+                <a href="Index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="properties.html">Properties</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; 2026 M. Ali Associates (Established 2010). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            var btn = document.getElementById("menuBtn");
+            menu.classList.toggle("show");
+            btn.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
